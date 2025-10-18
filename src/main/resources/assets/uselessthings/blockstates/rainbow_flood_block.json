@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "level=0": { "model": "uselessthings:block/rainbow_flood" },
+    "level=1": { "model": "uselessthings:block/rainbow_flood" },
+    "level=2": { "model": "uselessthings:block/rainbow_flood" },
+    "level=3": { "model": "uselessthings:block/rainbow_flood" },
+    "level=4": { "model": "uselessthings:block/rainbow_flood" },
+    "level=5": { "model": "uselessthings:block/rainbow_flood" },
+    "level=6": { "model": "uselessthings:block/rainbow_flood" },
+    "level=7": { "model": "uselessthings:block/rainbow_flood" },
+    "level=8": { "model": "uselessthings:block/rainbow_flood" },
+    "level=9": { "model": "uselessthings:block/rainbow_flood" },
+    "level=10": { "model": "uselessthings:block/rainbow_flood" },
+    "level=11": { "model": "uselessthings:block/rainbow_flood" },
+    "level=12": { "model": "uselessthings:block/rainbow_flood" },
+    "level=13": { "model": "uselessthings:block/rainbow_flood" },
+    "level=14": { "model": "uselessthings:block/rainbow_flood" },
+    "level=15": { "model": "uselessthings:block/rainbow_flood" }
+  }
+}

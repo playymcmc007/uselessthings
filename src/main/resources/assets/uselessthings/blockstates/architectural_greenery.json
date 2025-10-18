@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "withered=false": {
+      "model": "uselessthings:block/architectural_greenery"
+    },
+    "withered=true": {
+      "model": "uselessthings:block/architectural_greenery_withered"
+    }
+  }
+}
