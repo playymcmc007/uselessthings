@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "uselessthings",
+  "pattern": [
+    "PPP",
+    "SES",
+    " S "
+  ],
+  "key": {
+    "P": {
+      "item": "uselessthings:illusion_petal"
+    },
+    "E": {
+      "item": "minecraft:echo_shard"
+    },
+    "S": {
+      "tag": "minecraft:saplings"
+    }
+  },
+  "result": {
+    "item": "uselessthings:plant_staff",
+    "count": 1
+  }
+}

@@ -85,6 +85,7 @@ public class RainbowFloodBlock extends LiquidBlock {
 
     @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        if (!level.isAreaLoaded(pos, 1)) return;
         if (!level.isClientSide) {
             for (Direction direction : Direction.values()) {
                 BlockPos adjacentPos = pos.relative(direction);

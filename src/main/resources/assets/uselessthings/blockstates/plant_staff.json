@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "is_upper=false": {
+      "model": "uselessthings:block/plant_staff_lower"
+    },
+    "is_upper=true": {
+      "model": "uselessthings:block/plant_staff_upper"
+    }
+  }
+}

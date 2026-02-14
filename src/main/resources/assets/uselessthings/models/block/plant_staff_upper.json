@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "uselessthings:block/plant_staff_upper"
+  },
+  "render_type": "cutout"
+}

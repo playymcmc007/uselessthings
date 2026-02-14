@@ -6,8 +6,10 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLEnvironment;
 import org.apache.logging.log4j.LogManager;
@@ -20,16 +22,21 @@ public class UselessThings {
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
     public UselessThings() {
-
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
         ModItems.register();
-        ModBlocks.register();
+        ModBlocks.register(modEventBus);
         ModFluids.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModEffects.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModPotions.register(FMLJavaModLoadingContext.get().getModEventBus());
+        modEventBus.addListener(this::commonSetup);
+        forgeEventBus.register(this);
         ModEventHandlers.register();
-        MinecraftForge.EVENT_BUS.register(this);
-
         if (FMLEnvironment.dist == Dist.CLIENT) {
             FMLJavaModLoadingContext.get().getModEventBus().addListener(this::registerBlockColors);
         }
+    }
+    private void commonSetup(final FMLCommonSetupEvent event) {
     }
     private void registerBlockColors(RegisterColorHandlersEvent.Block event) {
         event.register(

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": {
+      "tag": "minecraft:coals"
+    },
+    "B": {
+      "item": "minecraft:blaze_rod"
+    },
+    "H": {
+      "item": "minecraft:honeycomb"
+    }
+  },
+  "pattern": [
+    "C",
+    "B",
+    "H"
+  ],
+  "result": {
+    "item": "uselessthings:hive_poker",
+    "count": 1
+  }
+}

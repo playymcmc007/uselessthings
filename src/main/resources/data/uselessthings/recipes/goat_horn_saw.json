@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "uselessthings",
+  "pattern": [
+    "  G",
+    " GS",
+    "IS "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:goat_horn"
+    }
+  },
+  "result": {
+    "item": "uselessthings:goat_horn_saw",
+    "count": 1
+  }
+}
