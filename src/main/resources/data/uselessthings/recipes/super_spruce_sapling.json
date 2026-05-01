@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uselessthings:super_bone_meal"
+    },
+    {
+      "item": "minecraft:spruce_sapling"
+    }
+  ],
+  "result": {
+    "item": "uselessthings:super_spruce_sapling",
+    "count": 1
+  }
+}

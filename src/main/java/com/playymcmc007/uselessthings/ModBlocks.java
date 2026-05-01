@@ -30,7 +30,26 @@ public class ModBlocks {
                             state.getValue(PlantStaff.ACTIVATED) ?
                                     Math.min(state.getValue(PlantStaff.PROGRESS) / 2, 7) : 0)
                     .offsetType(BlockBehaviour.OffsetType.XZ)));
-
+    public static final RegistryObject<Block> SUPER_CHUNK_BLOCK = BLOCKS.register("super_chunk_block",
+        () -> new SuperChunkBlock(BlockBehaviour.Properties.of().sound(SoundType.METAL).mapColor(MapColor.COLOR_LIGHT_GRAY)));
+    public static final RegistryObject<Block> SUPER_OAK_SAPLING = BLOCKS.register("super_oak_sapling",
+            () -> new SuperSaplingBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> SUPER_SPRUCE_SAPLING = BLOCKS.register("super_spruce_sapling",
+            () -> new SuperSaplingBlock(BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING)));
+    public static final RegistryObject<Block> SUPER_BIRCH_SAPLING = BLOCKS.register("super_birch_sapling",
+            () -> new SuperSaplingBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_SAPLING)));
+    public static final RegistryObject<Block> SUPER_JUNGLE_SAPLING = BLOCKS.register("super_jungle_sapling",
+            () -> new SuperSaplingBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_SAPLING)));
+    public static final RegistryObject<Block> SUPER_ACACIA_SAPLING = BLOCKS.register("super_acacia_sapling",
+            () -> new SuperSaplingBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_SAPLING)));
+    public static final RegistryObject<Block> SUPER_DARK_OAK_SAPLING = BLOCKS.register("super_dark_oak_sapling",
+            () -> new SuperSaplingBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_SAPLING)));
+    public static final RegistryObject<Block> SUPER_MANGROVE_PROPAGULE = BLOCKS.register("super_mangrove_propagule",
+            () -> new SuperSaplingBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_PROPAGULE)));
+    public static final RegistryObject<Block> SUPER_CHERRY_SAPLING = BLOCKS.register("super_cherry_sapling",
+            () -> new SuperSaplingBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING)));
+    public static final RegistryObject<Block> INVISIBLE_LIGHT = BLOCKS.register("invisible_light",
+            () -> new InvisibleLightBlock());
     public static void initCache() {
         PlantStaffCache.init();
     }

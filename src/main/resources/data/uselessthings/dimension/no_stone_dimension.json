@@ -1,0 +1,11 @@
+{
+  "type": "uselessthings:no_stone_dim_type",
+  "generator": {
+    "type": "uselessthings:no_stone_generator",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "preset": "minecraft:overworld"
+    },
+    "settings": "minecraft:overworld"
+  }
+}

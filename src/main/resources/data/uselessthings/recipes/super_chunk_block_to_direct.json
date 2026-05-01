@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " R ",
+    "RSR",
+    " R "
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "uselessthings:super_chunk_block_ticket"
+    }
+  },
+  "result": {
+    "item": "uselessthings:super_chunk_block_direct"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "uselessthings:block/super_acacia_sapling"
+  },
+  "render_type": "cutout"
+}

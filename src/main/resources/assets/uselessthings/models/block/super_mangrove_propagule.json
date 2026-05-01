@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "uselessthings:block/super_mangrove_propagule"
+  },
+  "render_type": "cutout"
+}

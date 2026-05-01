@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "uselessthings:block/super_birch_sapling"
+  },
+  "tintindex": 0
+}

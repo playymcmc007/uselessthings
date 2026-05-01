@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "uselessthings:block/super_oak_sapling"
+    },
+    "facing=down": {
+      "model": "uselessthings:block/super_oak_sapling",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "uselessthings:block/super_oak_sapling",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "uselessthings:block/super_oak_sapling",
+      "x": -90
+    },
+    "facing=west": {
+      "model": "uselessthings:block/super_oak_sapling",
+      "x": 90,
+      "y": -90
+    },
+    "facing=east": {
+      "model": "uselessthings:block/super_oak_sapling",
+      "x": 90,
+      "y": 90
+
+    }
+  }
+}

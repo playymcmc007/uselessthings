@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uselessthings:super_bone_meal"
+    },
+    {
+      "item": "minecraft:mangrove_propagule"
+    }
+  ],
+  "result": {
+    "item": "uselessthings:super_mangrove_propagule",
+    "count": 1
+  }
+}

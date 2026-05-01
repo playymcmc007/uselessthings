@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "uselessthings:super_bone_meal"
+    }
+  ],
+  "result": {
+    "item": "minecraft:bone_meal",
+    "count": 64
+  }
+}
