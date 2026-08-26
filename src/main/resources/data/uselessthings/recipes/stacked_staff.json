@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:experience_bottle" },
+    { "item": "minecraft:stick" },
+    { "item": "minecraft:stick" }
+  ],
+  "result": {
+    "item": "uselessthings:experience_stacked_staff"
+  }
+}

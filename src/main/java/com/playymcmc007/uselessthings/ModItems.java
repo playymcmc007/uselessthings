@@ -1,5 +1,6 @@
 package com.playymcmc007.uselessthings;
 
+import com.playymcmc007.uselessthings.block.ExperienceStackedBlock;
 import com.playymcmc007.uselessthings.block.SuperChunkBlock;
 import com.playymcmc007.uselessthings.item.*;
 import net.minecraft.network.chat.Component;
@@ -155,7 +156,19 @@ public class ModItems {
                     .rarity(Rarity.EPIC)
                     .fireResistant()
             ));
-
+    public static final RegistryObject<Item> VOID_BOOTS = ITEMS.register("void_boots",
+            () -> new VoidBootsItem(ModArmorMaterials.VOID, new Item.Properties()
+                    .stacksTo(1)
+                    .rarity(Rarity.EPIC)
+                    .fireResistant()
+            ));
+    public static final RegistryObject<Item> EXPERIENCE_STACKED_BLOCK = ITEMS.register("experience_stacked_block",
+            () -> new BlockItem(ModBlocks.EXPERIENCE_STACKED_BLOCK.get(), new Item.Properties()
+            ));
+    public static final RegistryObject<Item> EXPERIENCE_STACKED_STAFF = ITEMS.register("experience_stacked_staff",
+            () -> new ExperienceStackedStaffItem(new Item.Properties().stacksTo(1).durability(100)));
+    public static final RegistryObject<Item> TOUCH_OF_ZERO = ITEMS.register("touch_of_zero",
+            TouchOfZeroItem::new);
     public static void register() {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
@@ -183,6 +196,11 @@ public class ModItems {
             event.accept(PLANT_STAFF.get());
             event.accept(SUPER_CHUNK_BLOCK_TICKET.get());
             event.accept(SUPER_CHUNK_BLOCK_DIRECT.get());
+            event.accept(EXPERIENCE_STACKED_BLOCK.get());
+        }
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(VOID_CROWN.get());
+            event.accept(VOID_BOOTS.get());
         }
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(RAINBOW_FLOOD_BUCKET.get());
@@ -190,7 +208,7 @@ public class ModItems {
             event.accept(HIVE_POKER.get());
             event.accept(GOAT_HORN_SAW.get());
             event.accept(TIME_REVERSE.get());
-            event.accept(VOID_CROWN.get());
+            event.accept(EXPERIENCE_STACKED_STAFF.get());
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ILLUSION_PETAL.get());

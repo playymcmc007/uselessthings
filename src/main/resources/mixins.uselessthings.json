@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.playymcmc007.uselessthings.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "uselessthings.refmap.json",
+  "mixins": [
+    "SoundBufferMixin",
+    "NativeImageMixin",
+    "TextureAtlasMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

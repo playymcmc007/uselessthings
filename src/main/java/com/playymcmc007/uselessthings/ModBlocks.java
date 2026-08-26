@@ -50,6 +50,13 @@ public class ModBlocks {
             () -> new SuperSaplingBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING)));
     public static final RegistryObject<Block> INVISIBLE_LIGHT = BLOCKS.register("invisible_light",
             () -> new InvisibleLightBlock());
+    public static final RegistryObject<Block> EXPERIENCE_STACKED_BLOCK = BLOCKS.register("experience_stacked_block",
+            () -> new ExperienceStackedBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_LIGHT_GREEN)
+                    .sound(SoundType.GLASS)
+                    .strength(0.5f)
+                    .noOcclusion()
+            ));
     public static void initCache() {
         PlantStaffCache.init();
     }

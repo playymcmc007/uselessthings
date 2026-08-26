@@ -3,5 +3,10 @@
     "sounds": [
       "uselessthings:sprayer_use"
     ]
+  },
+  "super_laser": {
+    "sounds": [
+      "uselessthings:super_laser"
+    ]
   }
 }

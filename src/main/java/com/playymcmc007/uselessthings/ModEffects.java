@@ -1,6 +1,6 @@
 package com.playymcmc007.uselessthings;
 
-import com.playymcmc007.uselessthings.effect.ChaosEffect;
+import com.playymcmc007.uselessthings.effect.*;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,7 +15,10 @@ public class ModEffects {
             "chaos",
             ChaosEffect::new
     );
-
+    public static final RegistryObject<MobEffect> SUPER_LASER_EFFECT = EFFECTS.register(
+            "super_laser",
+            SuperLaserEffect::new
+    );
     public static void register(IEventBus eventBus) {
         EFFECTS.register(eventBus);
     }

@@ -27,6 +27,22 @@ public class ModPotions {
             )
     );
 
+    public static final RegistryObject<Potion> SUPER_LASER_POTION = POTIONS.register(
+            "super_laser_potion",
+            () -> new Potion(
+                    new MobEffectInstance(ModEffects.SUPER_LASER_EFFECT.get(), 12000, 0)
+            )
+    );
+
+    // 强化超级激光药水：1小时30分钟 = 1800 ticks
+    public static final RegistryObject<Potion> STRONG_SUPER_LASER_POTION = POTIONS.register(
+            "strong_super_laser_potion",
+            () -> new Potion(
+                    "super_laser_potion",
+                    new MobEffectInstance(ModEffects.SUPER_LASER_EFFECT.get(), 18000, 0)
+            )
+    );
+
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);
     }

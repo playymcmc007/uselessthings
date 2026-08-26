@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 public class TeleportPacket {
     private static final String PROTOCOL_VERSION = "1";
     public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(
-            new ResourceLocation(UselessThings.MODID, "main"),
+            new ResourceLocation(UselessThings.MODID, "teleport"),
             () -> PROTOCOL_VERSION,
             PROTOCOL_VERSION::equals,
             PROTOCOL_VERSION::equals

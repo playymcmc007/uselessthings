@@ -22,22 +22,18 @@ public class BrewingRecipes {
     @SubscribeEvent
     public static void registerBrewingRecipes(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            // 配方1：中毒II药水 + 幻之花瓣 → 混沌药水
             addAllVersionsRecipe(Potions.STRONG_POISON, ModItems.ILLUSION_PETAL.get(), ModPotions.CHAOS_POTION.get());
-
-            // 配方2：混沌药水 + 萤石粉 → 混沌药水II
             addAllVersionsRecipe(ModPotions.CHAOS_POTION.get(), Items.GLOWSTONE_DUST, ModPotions.STRONG_CHAOS_POTION.get());
-
+            addAllVersionsRecipe(Potions.STRONG_SWIFTNESS, ModItems.VOID_CROWN.get(), ModPotions.SUPER_LASER_POTION.get());
+            addAllVersionsRecipe(ModPotions.SUPER_LASER_POTION.get(), Items.REDSTONE, ModPotions.STRONG_SUPER_LASER_POTION.get());
         });
     }
 
     private static void addAllVersionsRecipe(Potion input, ItemLike reagent, Potion output) {
-        // 普通药水
         addCustomRecipe(input, Items.POTION, reagent, output, Items.POTION);
-        // 喷溅药水
         addCustomRecipe(input, Items.SPLASH_POTION, reagent, output, Items.SPLASH_POTION);
-        // 滞留药水
         addCustomRecipe(input, Items.LINGERING_POTION, reagent, output, Items.LINGERING_POTION);
+
     }
 
     private static void addCustomRecipe(Potion inputPotion, ItemLike inputContainer, ItemLike reagent,
@@ -47,7 +43,6 @@ public class BrewingRecipes {
         BrewingRecipeRegistry.addRecipe(new CustomBrewingRecipe(input, reagent, output));
     }
 
-    // 自定义酿造配方类
     private static final class CustomBrewingRecipe extends BrewingRecipe {
         private final ItemStack inputStack;
 

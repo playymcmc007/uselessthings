@@ -3,20 +3,20 @@ package com.playymcmc007.uselessthings;
 import com.playymcmc007.uselessthings.block.ArchitecturalGreeneryBlock;
 import com.playymcmc007.uselessthings.block.SuperChunkBlock;
 import com.playymcmc007.uselessthings.client.effect.*;
-import com.playymcmc007.uselessthings.effect.*;
 import com.playymcmc007.uselessthings.entity.*;
 import com.playymcmc007.uselessthings.light.DynamicLightManager;
+import com.playymcmc007.uselessthings.network.LaserNetwork;
 import com.playymcmc007.uselessthings.network.TeleportPacket;
 import com.playymcmc007.uselessthings.world.ModWorldTypes;
 import com.playymcmc007.uselessthings.world.StructureGenerator;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.dimension.LevelStem;
-import net.minecraft.world.level.levelgen.presets.WorldPreset;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -31,6 +31,9 @@ import net.minecraftforge.registries.DataPackRegistryEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+
+import java.util.Set;
+import java.util.UUID;
 
 @Mod(UselessThings.MODID)
 public class UselessThings {
@@ -49,9 +52,10 @@ public class UselessThings {
         ModFluids.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModEffects.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModPotions.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModEntities.register(modEventBus);
         ModWorldTypes.register(modEventBus);
         ModFeatures.register(modEventBus);
-
+        LaserNetwork.register();
         modEventBus.addListener(this::commonSetup);
         forgeEventBus.register(this);
         ModEventHandlers.register();
